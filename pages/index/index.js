@@ -19,19 +19,22 @@ Page({
     })
   },
   search:function(){
-    console.log(this.data.key);
-    wx.request({
-      url: 'https://api.zhuishushenqi.com/book/fuzzy-search', //仅为示例，并非真实的接口地址
-      data: {
-        query: this.data.key ,
-      },
-      header: {
-          'content-type': 'application/json'
-      },
-      success: function(res) {
-        console.log(res.data)
-      }
+    // console.log(this.data.key);
+    wx.navigateTo({
+      url: '../search/search?key=' + '1794'
     })
+    // wx.request({
+    //   url: 'https://api.zhuishushenqi.com/book/fuzzy-search', //仅为示例，并非真实的接口地址
+    //   data: {
+    //     query: this.data.key ,
+    //   },
+    //   header: {
+    //       'content-type': 'application/json'
+    //   },
+    //   success: function(res) {
+    //     console.log(res.data)
+    //   }
+    // })
   },
   onLoad: function () {
     console.log('onLoad')
