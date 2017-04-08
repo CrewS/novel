@@ -21,7 +21,7 @@ Page({
   search:function(){
     // console.log(this.data.key);
     wx.navigateTo({
-      url: '../search/search?key=' + '1794'
+      url: '../search/search?key=' + this.data.key
     })
     // wx.request({
     //   url: 'https://api.zhuishushenqi.com/book/fuzzy-search', //仅为示例，并非真实的接口地址

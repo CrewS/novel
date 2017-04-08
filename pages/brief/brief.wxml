@@ -1,0 +1,15 @@
+<!--search.wxml-->
+<view class="brief-container">
+  <view class="book-item">
+    <image wx:if="{{detail.cover ==''}}" class="book-cover" src="../img/abc.jpg" />
+    <image wx:else class="book-cover" src="{{detail.cover}}" />
+    <view class="book-info">
+      <text class="book-name">{{detail.title}} </text>
+      <text class="book-detail-info">{{detail.author}}| {{detail.majorCate}} | {{detail.wordCount / 10000}}万字</text>
+    </view>
+  </view>
+  <view class="op-container">
+    <button class="op-btn" bindtap="goBack">返回 </button>
+    <button class="op-btn op-btn-read" bindtap="readBook">阅读 </button>
+  </view>
+</view>

@@ -10,16 +10,16 @@ Page({
     this.setData({
       key:option.key
     })
-    this.setData({
-        books:[{
-            title:'abc'
-        },{title:'123456'}
-        ] 
-      })
+    
   },
   onShow:function(){
-      
-    // this.getResult();
+    // this.setData({
+    //   books:[{
+    //       title:'abc'
+    //   },{title:'123456'}
+    //   ] 
+    // })
+    this.getResult();
   },
   getResult: function (){
     var that = this;
@@ -32,11 +32,45 @@ Page({
           'content-type': 'application/json'
       },
       success: function(res) {
-        that.setData({
-          books:res.data.books
+        var book = res.data.books.map((item)=>{
+          console.log(item)
+          if(item.cover ==''){
+
+          }else if(item.cover.indexOf('/agent/')==0){
+            item.cover = item.cover.slice(7)
+          }else{
+            item.cover = 'http://statics.zhuishushenqi.com/'+item.cover
+          }
+          return item
         });
-        console.log(res.data)
+        // console.log(book)
+        // for(let item of book){
+        //   console.log(item.cover)
+        //   if(item.cover ==''){
+        //     return
+        //   }else if(cover.indexOf('/agent/')==0){
+        //     item.cover = item.cover.slice(7)
+        //   }else{
+        //     item.cover = 'http://statics.zhuishushenqi.com/'+item.cover
+        //   }
+          
+        // }
+        console.log(book)
+        that.setData({
+          books:book
+        });
+        
       }
     })
+  },
+  select:function(event){
+    console.log(event)
+    let id = event.currentTarget.dataset.id;
+    wx.navigateTo({
+      url: '../brief/brief?_id=' + id
+    })
+  },
+  url:function(data){
+    return data.slice(data)
   }
 })

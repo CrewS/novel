@@ -1,6 +1,18 @@
 <!--search.wxml-->
-<view class="container log-list">
+<view>
+  
+</view>
+<view class="book-list">
   <block wx:for="{{books}}" wx:for-item="book" wx:key="*this">
-    <text class="log-item">{{index + 1}}:{{book.title}} </text>
+    <view class="book-item" data-id="{{book._id}}" bindtap="select">
+      <image wx:if="{{book.cover ==''}}" class="book-cover" src="../img/abc.jpg" />
+      <image wx:else class="book-cover" src="{{book.cover}}" />
+      <view class="book-info">
+        <text class="book-name">{{book.title}} </text>
+        <text class="book-detail-info">{{book.latelyFollower}}人在追 | {{book.retentionRatio}}读者存留 | {{book.author}}著</text>
+      </view>
+      
+    </view>
+    
   </block>
 </view>

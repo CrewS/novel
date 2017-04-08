@@ -6,7 +6,7 @@
   </view>
   <view class="usermotto">
     <!--<text class="user-motto">{{motto}}</text>-->
-    <text class="user-motto">请输入关键字:{{key}}</text>
+    <text class="user-motto">请输入书名进行搜索:</text>
     <input class="input-box" bindinput="bindKeyInput" type="text" />
     <button bindtap="search">立即搜索</button>
   </view>

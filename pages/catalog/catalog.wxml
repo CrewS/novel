@@ -1,0 +1,12 @@
+<!--search.wxml-->
+<view class="catalog-container">
+  <view class="catalog-item">
+    <view class="item-view" wx:for="{{catalog}}" wx:for-item="item" wx:key="*this">
+      <text >{{item.title}}</text>
+    </view>
+  </view>
+  <view class="op-container">
+    <button class="op-btn" bindtap="goBack">返回 </button>
+    <!--<button class="op-btn op-btn-read">阅读 </button>-->
+  </view>
+</view>

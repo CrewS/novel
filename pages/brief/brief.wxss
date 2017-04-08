@@ -1,8 +1,5 @@
-.book-list {
-  display: flex;
-  flex-direction: column;
-  /*padding: 40rpx;*/
-  border-top: 1rpx solid #dedede;
+.brief-container{
+  padding: 20rpx;
 }
 .book-item{
   display: flex;
@@ -22,7 +19,7 @@
   padding-top: 20rpx;
   padding-bottom: 20rpx;
   /*border-top: 1rpx solid #dedede;*/
-  border-bottom: 1rpx solid #dedede;
+  /*border-bottom: 1rpx solid #dedede;*/
   font-style: normal;
 }
 .book-name {
@@ -39,6 +36,18 @@
 .book-detail-info{
   display: block;
   font-size: 26rpx;
-  margin-top: 5rpx;
+  margin-top: 15rpx;
   color: #aaa;
+}
+.op-container{
+  display: flex;
+  flex-direction: row;
+}
+.op-btn{
+  flex-grow: 1;
+  margin: 0 20rpx;
+}
+.op-btn-read{
+  background-color: #de0010;
+  color: #fff;
 }
