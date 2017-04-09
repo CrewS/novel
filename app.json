@@ -1,15 +1,17 @@
 {
   "pages":[
+    
     "pages/index/index",
     "pages/catalog/catalog",
     "pages/brief/brief",
     "pages/logs/logs",
-    "pages/search/search"
+    "pages/search/search",
+    "pages/detail/detail"
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "简单看书",
+    "navigationBarTextStyle":"#fff"
   }
 }

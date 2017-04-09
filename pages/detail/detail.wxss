@@ -1,0 +1,11 @@
+.details-container{
+  padding: 20rpx;
+  background: #f8f3e9;
+}
+.chapter{
+  text-indent: 2em;
+}
+.op-container{
+  display: flex;
+  flex-direction: row;
+}

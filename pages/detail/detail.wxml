@@ -1,0 +1,14 @@
+<!--search.wxml-->
+<import src="../../wxParse/wxParse.wxml"/> 
+<view class="details-container">
+  <view class="chapter">
+    <!--<text>{{detail.body}}</text>-->
+    <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+  </view>
+  <view class="op-container">
+    <button class="op-btn" bindtap="goPrev">上一章</button>
+    <button class="op-btn" bindtap="goBack">目录</button>
+    <button class="op-btn" bindtap="goNext">下一章</button>
+    <!--<button class="op-btn op-btn-read">阅读 </button>-->
+  </view>
+</view>

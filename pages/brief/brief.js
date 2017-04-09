@@ -7,6 +7,7 @@ Page({
   },
   onLoad: function (option) {
     // console.log(option.key);
+    
     this.setData({
       _id:option._id
     })
@@ -77,7 +78,10 @@ Page({
         }
         res.data.cover = cover;
         that.setData({
-          detail:res.data
+          detail:res.data,
+        })
+        wx.setNavigationBarTitle({
+          title: res.data.title
         })
         console.log(res.data)
       }
@@ -89,7 +93,7 @@ Page({
   readBook:function(){
     // console.log('')
     wx.navigateTo({
-      url: '../catalog/catalog?_id=' + this.data._id
+      url: '../catalog/catalog?_id=' + this.data._id + '&title='+this.data.detail.title
     })
   }
 })

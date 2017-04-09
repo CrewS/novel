@@ -2,7 +2,7 @@
 <view class="catalog-container">
   <view class="catalog-item">
     <view class="item-view" wx:for="{{catalog}}" wx:for-item="item" wx:key="*this">
-      <text >{{item.title}}</text>
+      <text class="catalog-title" data-number="{{index}}" bindtap="goDetail" >{{item.title}}</text>
     </view>
   </view>
   <view class="op-container">

@@ -1,5 +1,5 @@
-//logs.js
-var util = require('../../utils/util.js')
+
+var app = getApp()
 Page({
   data: {
     logs: [],
@@ -11,7 +11,9 @@ Page({
     this.setData({
       _id:option._id
     })
-    
+    wx.setNavigationBarTitle({
+      title: option.title + '-章节列表'
+    })
   },
   onShow:function(){
     this.setData({
@@ -68,6 +70,7 @@ Page({
         that.setData({
           catalog:res.data.chapters
         })
+        app.chapters = res.data.chapters;
       }
     })
   },
@@ -95,6 +98,12 @@ Page({
         that.getCatalog();
         console.log(res.data,id)
       }
+    })
+  },
+  goDetail: function(event){
+    var index = event.currentTarget.dataset.number;
+    wx.navigateTo({
+      url: '../detail/detail?index=' + index
     })
   },
   goBack:function(){

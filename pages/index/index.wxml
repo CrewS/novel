@@ -6,8 +6,15 @@
   </view>
   <view class="usermotto">
     <!--<text class="user-motto">{{motto}}</text>-->
-    <text class="user-motto">请输入书名进行搜索:</text>
-    <input class="input-box" bindinput="bindKeyInput" type="text" />
-    <button bindtap="search">立即搜索</button>
+    <!--<text class="user-motto">请输入书名进行搜索:</text>-->
+    <input class="input-box" placeholder="输入书名" bindinput="bindKeyInput" type="text" />
+    <button class="serach" bindtap="search">立即搜索</button>
+  </view>
+  <view class="info-view">
+      <text class="info-text">简单看书：</text>
+      <text class="info-text">直接搜索书籍，开始看书</text>
+      <text class="info-text">没有繁杂的界面，只为简单看书</text>
+      <text class="info-text">个人兴趣开发</text>
+      <text class="info-text">用户交流:QQ群630677065</text>
   </view>
 </view>

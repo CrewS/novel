@@ -1,5 +1,6 @@
-.brief-container{
+.catalog-container{
   padding: 20rpx;
+  background: #f8f3e9;
 }
 .book-item{
   display: flex;
@@ -53,4 +54,7 @@
 }
 .item-view{
   padding: 20rpx;
+}
+.catalog-title{
+  display: block;
 }

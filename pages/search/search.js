@@ -6,6 +6,9 @@ Page({
     kety: '',
   },
   onLoad: function (option) {
+    wx.setNavigationBarTitle({
+      title: option.key+'-搜索结果'
+    })
     console.log(option.key);
     this.setData({
       key:option.key
@@ -33,7 +36,7 @@ Page({
       },
       success: function(res) {
         var book = res.data.books.map((item)=>{
-          console.log(item)
+          // console.log(item)
           if(item.cover ==''){
 
           }else if(item.cover.indexOf('/agent/')==0){
@@ -55,7 +58,7 @@ Page({
         //   }
           
         // }
-        console.log(book)
+        // console.log(book)
         that.setData({
           books:book
         });
@@ -64,7 +67,7 @@ Page({
     })
   },
   select:function(event){
-    console.log(event)
+    // console.log(event)
     let id = event.currentTarget.dataset.id;
     wx.navigateTo({
       url: '../brief/brief?_id=' + id
